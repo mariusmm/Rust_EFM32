@@ -1,0 +1,21 @@
+[package]
+name = "main_siliconlabs"
+version = "0.1.0"
+edition = "2021"
+categories = ["embedded", "no-std", "hardware-support"]
+keywords = ["arm", "cortex-m", "efm32", "efm32gg"]
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+cortex-m = "0.7.4"
+cortex-m-rt = "0.7.1"
+panic-itm = "0.4.2"
+efm32gg990 = "0.1.2"
+#vcell = "0.1.2"
+#panic-handler = "2.1.2"
+embedded-hal = { version = "0.2.1", features = ["unproven"] }
+efm32gg-hal = { version = "0.3.0", path = "../efm32gg-hal", features = [ "chip-efm32gg" ]}
+
+[features]
+rt = ["cortex-m-rt/device"]
+
